@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+        
+        
+        <title>EE263 Project
+        </title>
+        <script src="echarts.min.js"></script>
+        <script src="jquery-3.1.1.min.js"></script>
+        <script>
+            var e_provinces = ['shanghai', 'hebei', 'shanxi', 'inner mongolia', 'liaoning', 'jilin', 'heilongjiang', 'jiangsu', 'zhejiang', 'anhui', 'fujian', 'jiangxi', 'shandong', 'henan', 'hubei', 'hunan', 'guangdong', 'guangxi', 'hainan', 'sichuan', 'guizhou', 'yunnan', 'tibet', 'shaanxi', 'gansu', 'qinghai', 'ningxia', 'xinjiang', 'beijing', 'tianjin', 'chongqing'];
+            var c_provinces = ['上海', '河北', '山西', '内蒙古', '辽宁', '吉林', '黑龙江', '江苏', '浙江', '安徽', '福建', '江西', '山东', '河南', '湖北', '湖南', '广东', '广西', '海南', '四川', '贵州', '云南', '西藏', '陕西', '甘肃', '青海', '宁夏', '新疆', '北京', '天津', '重庆'];
+            var index;
+            function translate(chinese) {
+                for (var i = 0; i < c_provinces.length; i++) {
+                    if (chinese == c_provinces[i]) {
+                        index = i;
+                        return index;
+                    } else if (chinese == e_provinces[i]) {
+                        index = i;
+                        return index;
+                    }
+                }
+            }
+        </script>
+        <style type="text/css">
+            #china {
+                float: left;
+                width: 700px;
+                height: 500px
+            }
+
+            #province {
+                float: right;
+                width: 500px;
+                height: 500px
+            }
+        </style>
+    </head>
+    <body>
+<!--header==================================================================-->
+<div class="navbar-fixed">
+        <nav class="grey darken-1">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo center" style="margin: 0px 0px 0px 10px; font-family: 'Gorge'">China population density</a>
+                <ul class="right">
+                    <li>
+                        <form class="grey darken-2">
+                            <div class="input-field ">
+                                
+                                
+                               
+                            </div>
+                        </form>
+                    </li>
+                    <!-- Dropdown Trigger -->
+                    
+                </ul>
+
+
+
+                <ul class="side-nav" id="mobile-demo">
+                    
+                </ul>
+            </div>
+        </nav>
+    </div>
+<!--/ part==================================================================-->
+      <div class="container-fluid">
+        <!--
+        <h1 align="center">This is our project</h1>
+        -->
+        <div class="row">
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-5">
+            <div id="china"></div>
+          </div>
+          <div class="col-md-5">
+            <div id="province"></div>
+          </div>
+          <div class="col-md-1">
+          </div>
+        </div>
+        <div class="row">
+          <h2 class="brand-logo center" style="margin: 0px 0px 0px 10px; font-family: 'Gorge'">This is our story</h2>
+          <h5 class="brand-logo center" style="margin: 0px 0px 0px 10px; font-family: 'Gorge'">Mothers of the Disappeared" is a song by the rock band U2, the closing track on their album The Joshua Tree, released on 9 March 1987. The song was inspired by lead singer Bono's experiences in Nicaragua and El Salvador in July 1986, following U2's involvement on Amnesty International's A Conspiracy of Hope tour. He learned of the Madres de Plaza de Mayo, a group of women whose children had been abducted with the consent of Argentine and Chilean dictatorships. Thematically the song has been interpreted as an examination of failures and contradictions in US foreign policy and as a criticism of the Reagan Administration, which backed two South American regimes that seized power during coups and which provided financial support for the military regime in El Salvador. The song was favourably received by critics, and has been performed live on several tours, starting with the 1987 Joshua Tree Tour. It was played at four concerts on the 1998 PopMart Tour in South America; during two of these, the Madres joined the band onstage (pictured)</h5>
+        </div>  
+      </div>
+
+<!--footer part==================================================================-->
+      <footer class="page-footer grey darken-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 m6 s12">
+                    <h5 class="white-text" style="font-family: 'Trocchi', serif;">related resource</h5>
+                    <ul>
+                  <li>
+                      <span class="fa-stack fa-inverse">
+                      <i class="fa fa-square-o fa-stack-2x"></i>
+                      <i class="fa fa-facebook fa-stack-1x"></i>
+                    </span>
+                      <a class="grey-text text-lighten-3" href="">Facebook</a>
+                  </li>
+                    <li>
+                        <span class="fa-stack fa-inverse">
+                      <i class="fa fa-square-o fa-stack-2x"></i>
+                      <i class="fa fa-linkedin fa-stack-1x"></i>
+                    </span>
+                        <a class="grey-text text-lighten-3" href="">LinkedIn</a>
+                    </li>
+                  <li>
+                      <span class="fa-stack fa-inverse">
+                      <i class="fa fa-square-o fa-stack-2x"></i>
+                      <i class="fa fa-google-plus-square fa-stack-1x"></i>
+                    </span>
+                      <a class="grey-text text-lighten-3" href="">Google+</a>
+                  </li>
+                  <li>
+                      <span class="fa-stack fa-inverse">
+                      <i class="fa fa-square-o fa-stack-2x"></i>
+                      <i class="fa fa-university fa-stack-1x"></i>
+                    </span>
+                      <a class="grey-text text-lighten-3" href="">UCSC</a>
+                  </li>
+                </ul>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+<!--==================================================================-->
+          <script>
+            //读取json中的中国数据
+            var data = new Array();
+            var temp;
+
+             $.getJSON('Eng-Density.json',function(getData){
+               $.each(getData,function(obj){
+                 temp = {'name':obj,'value':this.all};
+                 data.push(temp);
+               });
+            });
+            
+            var c_chart = echarts.init(document.getElementById('china'));
+            $.get('map/json/china.json', function(chinaJson) {
+                echarts.registerMap('china', chinaJson);
+                var option = {
+                    title:{
+                      text:'CHINESE MAP'
+                    },
+                    visualMap: {
+                        min: 100,
+                        max: 1000,
+                        text:['High','Low'],
+                      },
+                    tooltip:{
+                      trigger:'item',
+                    },
+                    series: [{
+                        type: 'map',
+                        map: 'china',
+                        name: '/',
+                        data:data,
+                        label: {
+                        normal: {
+                            show: true
+                        },
+                        emphasis: {
+                            show: false
+                        }
+                    },
+                    }]
+                };
+            c_chart.setOption(option);
+            });
+
+            //点击函数
+            var c_city;
+            var e_city;
+
+            var temp1;
+            // function click(){
+              c_chart.on('click', function(params) {
+                  c_city = params.name;
+                  e_city = e_provinces[translate(params.name)];
+                  var upper = e_city.toUpperCase();
+
+                  var data1 = new Array();
+                  var temp;
+                   $.getJSON('Eng-Density.json',function(getData){
+                     temp1 = getData[e_city];
+                      $.each(temp1,function(obj,value){
+                        temp = {'name':obj,'value':value};
+                        data1.push(temp);
+                      });
+                  });
+
+
+                  $.get('map/json/' + e_city + '.json', function(geoJson) {
+                      echarts.registerMap(c_city, geoJson);
+                      var p_chart = echarts.init(document.getElementById('province'));
+                      p_chart.setOption({
+                        title:{
+                          text:upper+' MAP'
+                        },
+                        visualMap: {
+                            min: 100,
+                            max: 1000,
+                            text:['High','Low'],
+                          },
+                        tooltip:{
+                          trigger:'item',
+                        },
+                        
+                          series: [{
+                              type: 'map',
+                              map: c_city,
+                              data:data1,
+                          }]
+                      });
+                  });
+            });
+          // };
+          //
+          // click();
+          </script>
+        
+    </body>
+</html>
